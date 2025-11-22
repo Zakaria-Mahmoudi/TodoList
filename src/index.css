@@ -126,6 +126,7 @@ button {
 .deleteB {
   background: #ff6b6b;
   color: white;
+  margin-right: 10px;
 }
 
 .deleteB:hover {
@@ -139,6 +140,7 @@ button {
   color: white;
   font-size: 18px;
   padding: 8px 10px;
+  margin-right: 10px;
 }
 
 .upB:hover,
@@ -154,50 +156,79 @@ button {
 }
  
 @media (max-width: 480px) {
+
+  body {
+    padding: 10px;
+  }
+
   .container {
-    padding: 15px;
+    padding: 20px;
+    border-radius: 15px;
   }
 
   h1 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
   }
 
   input[type="text"] {
-    padding: 12px;
+    padding: 10px;
     font-size: 14px;
+    margin-bottom: 10px;
   }
 
   .addB {
     padding: 12px;
     font-size: 14px;
+    border-radius: 8px;
     margin-bottom: 20px;
   }
 
   li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
     padding: 12px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 8px;
   }
 
   li::before {
-    width: 25px;
-    height: 25px;
-    font-size: 14px;
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+    grid-row: span 2;
   }
 
   .task {
-    font-size: 14px;
+    font-size: 15px;
+    grid-column: 2 / 3;
   }
 
-  button {
+  .deleteB,
+  .upB,
+  .downB {
+    padding: 6px 8px;
     font-size: 12px;
-    padding: 6px 8px;
+    border-radius: 6px;
   }
 
-  .upB, .downB {
-    font-size: 16px;
-    padding: 6px 8px;
+  .deleteB {
+    grid-column: 3;
+    grid-row: 1;
+    margin-left: 5px;
+  }
+
+  .upB {
+    grid-column: 3;
+    grid-row: 2;
+    margin-left: 8px;
+  }
+
+  .downB {
+    grid-column: 3;
+    grid-row: 2;
+    margin-left: 8px;
   }
 }

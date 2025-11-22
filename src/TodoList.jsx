@@ -37,12 +37,15 @@ function TodoList(){
             <ol>
                 {
                     tasks.map((task,index)=>
-                    <li key={index}><span className="task">{task} </span> 
-                        <button className="deleteB" onClick={()=>removeTask(index)}>Delete</button>
-                        <button className="upB" onClick={()=>moveTaskUp(index)}>↑</button>
-                        <button className="downB" onClick={()=>moveTaskDown(index)}>↓</button>
+                    <li key={index}>
+                    <span className="task">{task}</span>
 
-                    </li>
+                    <div className="buttons-group">
+                        <button className="deleteB" onClick={() => removeTask(index)}>Delete</button>
+                        <button className="upB" onClick={() => moveTaskUp(index)}>↑</button>
+                        <button className="downB" onClick={() => moveTaskDown(index)}>↓</button>
+                    </div>
+</li>
                     
                     )}
             </ol>
