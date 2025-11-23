@@ -1,6 +1,6 @@
 import { useState } from "react"
 function TodoList(){
-    const[tasks,setTasks]=useState([]);
+    const[tasks,setTasks]=useState(["tirjeire"]);
     const[newtask,setNewTask]=useState("");
     function changeInput(event){
         setNewTask(event.target.value)
